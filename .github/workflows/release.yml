@@ -1,0 +1,12 @@
+name: Release
+on: workflow_dispatch
+permissions: write-all
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: softprops/action-gh-release@v2

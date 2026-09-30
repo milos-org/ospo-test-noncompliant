@@ -1,0 +1,14 @@
+name: Scoped top-level write
+on: workflow_dispatch
+permissions:
+  contents: write
+  issues: write
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo one
+  two:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo two

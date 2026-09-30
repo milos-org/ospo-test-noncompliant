@@ -1,0 +1,9 @@
+name: Single job inherits write
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  only:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo only

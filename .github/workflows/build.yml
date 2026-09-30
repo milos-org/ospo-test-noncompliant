@@ -1,0 +1,11 @@
+name: Build
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: codecov/codecov-action@v4
+      - uses: docker://alpine:3.20
+      - uses: ./.github/actions/local
+      - uses: milos-org/internal-action@main

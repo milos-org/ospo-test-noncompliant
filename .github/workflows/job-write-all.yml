@@ -1,0 +1,9 @@
+name: Job-level write-all
+on: workflow_dispatch
+permissions: read-all
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - run: echo deploy
